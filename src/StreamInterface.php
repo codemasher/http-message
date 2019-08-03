@@ -85,7 +85,7 @@ interface StreamInterface
      * @return void
      * @throws \RuntimeException on failure.
      */
-    public function seek(int $offset, int $whence = SEEK_SET): void;
+    public function seek(int $offset, int $whence = SEEK_SET): StreamInterface;
 
     /**
      * Seek to the beginning of the stream.
@@ -98,7 +98,7 @@ interface StreamInterface
      * @return void
      * @throws \RuntimeException on failure.
      */
-    public function rewind(): void;
+    public function rewind(): StreamInterface;
 
     /**
      * Returns whether or not the stream is writable.
